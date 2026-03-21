@@ -21,6 +21,7 @@ export default async function handler(req, res) {
     const model = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
 
     const prompt = `당신은 티스토리 블로그 전문 에디터입니다.
+현재 연도는 2026년입니다. 본문 내 연도 표기, 최신 트렌드 언급, 통계 수치 등은 모두 2026년 기준으로 작성하세요.
 아래 정보를 바탕으로 티스토리 HTML 에디터에 바로 붙여넣을 수 있는 완성형 HTML 본문을 작성하세요.
 순수 HTML 코드만 출력하세요. 마크다운 코드블록(\`\`\`)이나 다른 텍스트는 절대 포함하지 마세요.
 
