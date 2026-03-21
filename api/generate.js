@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
 
     const prompt = `당신은 티스토리 블로그 전문 에디터입니다.
 아래 정보를 바탕으로 티스토리 HTML 에디터에 바로 붙여넣을 수 있는 완성형 HTML 본문을 작성하세요.

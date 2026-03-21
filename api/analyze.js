@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
 
     const prompt = `다음 PDF 텍스트를 분석해서 아래 JSON 형식으로만 응답하세요.
 마크다운 코드블록 없이 순수 JSON만 출력하세요.
