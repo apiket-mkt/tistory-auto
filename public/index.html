@@ -339,7 +339,7 @@ function doDrag(e,t) {
 function onFile(e) { processFile(e.target.files[0]); }
 
 async function processFile(file) {
-  if (!file||file.type!=='application/pdf') { alert('PDF 파일만 가능합니다'); return; }
+  if (!file||(file.type!=='application/pdf' && !file.name.toLowerCase().endsWith('.pdf'))) { alert('PDF 파일만 가능합니다'); return; }
   S.fileName = file.name.replace('.pdf','');
   hide('sec1'); show('sec2'); setStep(2);
   log(`📂 ${file.name} (${(file.size/1024/1024).toFixed(1)}MB)`,'wk');
